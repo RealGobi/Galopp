@@ -1,4 +1,9 @@
 /*
+1. spelet startar
+2. rulla boll
+3. flytta häst
+4. kolla leaderposition + skriv ut hästarnas position
+...............
 
 repetitoner: hästen går framåt och bollarna kastas
 
@@ -10,7 +15,7 @@ ordning:
 
 
 krav: * hästen rör sig 1,2,3 steg
-* läng 20 steg
+* längd 20 steg
 * vinnaren presenteras
 
 */
@@ -24,11 +29,6 @@ function RaceHorses(number) {
     
 }
 
-// Kontrollera om någon vunnit
-while ( leaderPosition < 20){
-
-
-}
 // Skapa fyra hästar (objekt från constructorn raceHorse)
 
 var horse1 = new RaceHorses(1);
@@ -42,12 +42,16 @@ var allHorses = [
     horse1, horse2, horse3, horse4
 ];
 
+// Kontrollera om någon vunnit, samt loopar spelet
+while ( leaderPosition < 20){
+
 // Rulla bollarna i hål.
 
 horse1.position +=1;
 horse2.position +=3;
 horse3.position +=1;
 horse4.position +=2;
+
 
 // skriver hur hästarna ligger till
 
@@ -58,17 +62,6 @@ allHorses.forEach(function(horse){
     }
   });
 
+}
 
-// Rulla bollarna i hål.
 
-
-// Rulla bollarna igen
-horse1.position +=0;  // Spelaren missade hålet!
-horse2.position +=2;
-horse3.position +=1;
-horse4.position +=1;
-
-// Skriv ut hur hästarna ligger till efter andra rundan.
-allHorses.forEach(function(horse){
-  console.log("Häst " + horse.number + ":" + horse.position + "\n");
-});
