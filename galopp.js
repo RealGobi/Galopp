@@ -31,17 +31,28 @@ function RaceHorses(number) {
 }
 
 // Skapa fyra hästar (objekt från constructorn raceHorse)
-
+/*
 var horse1 = new RaceHorses(1);
 var horse2 = new RaceHorses(2);
 var horse3 = new RaceHorses(3);
 var horse4 = new RaceHorses(4);
+*/
 
+function createHorses(nr) {
+    var horses = [];
+
+for (let i = 0; i < nr; i++) {
+var horse = new RaceHorses (i + 1);
+horses.push(horse);
+}
+return horses;
+}
+
+var allHorses = createHorses(12);
 // Samla ihop alla hästar i ett stall
 
-var allHorses = [
-    horse1, horse2, horse3, horse4
-];
+
+
 // slumpa fram poöng till hästarna
 function moveHorses(){
 allHorses.forEach(function(horse){
