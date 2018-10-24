@@ -1,1 +1,1 @@
-# Galopp Skolprojekt, inget annant
+# Galopp Skolprojekt, inget annat
